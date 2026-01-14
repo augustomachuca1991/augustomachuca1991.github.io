@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mis 15 - Morena Catalina</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@300;400&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <button class="btn music-btn" id="musicBtn" onclick="toggleMusic()">▶</button>
+
+    <header class="header-animado">
+      <p class="subtitulo">¡Mis 15 Años!</p>
+      <h1>Morena Catalina</h1>
+      <p class="fecha">04 . 04 . 2026</p>
+      <p style="margin-top: 20px; font-size: 1.1rem; letter-spacing: 2px; font-weight: 300">
+        Te invito a celebrar mis 15 años<br />
+        en una noche llena de magia y sueños.
+      </p>
+    </header>
+
+    <section style="background: linear-gradient(135deg, #b39ddb 0%, #ffffff 100%)">
+      <h2 style="color: white; text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1)">¡Faltan solo!</h2>
+      <div class="contador" id="timer">
+        <div><span id="days" style="font-size: 1.5rem; font-weight: bold">00</span><br />Días</div>
+        <div><span id="hours" style="font-size: 1.5rem; font-weight: bold">00</span><br />Hs</div>
+        <div><span id="minutes" style="font-size: 1.5rem; font-weight: bold">00</span><br />Min</div>
+        <div><span id="seconds" style="font-size: 1.5rem; font-weight: bold">00</span><br />Seg</div>
+      </div>
+    </section>
+
+    <section style="background-color: #eee9f0">
+      <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.8rem; color: #9575cd">Misa</h2>
+      <p>La ceremonia se realizará en:<br /><strong>A confirmar</strong></p>
+      <!--  <div style="margin: 30px auto; max-width: 500px">
+        <img src="parroquia.jpg" alt="Parroquia San Francisco de Asís" style="width: 100%; border-radius: 18px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+      </div>
+      <button class="btn" onclick="toggleUbicacionMisa(event)">VER UBICACIÓN</button>
+      <div id="ubicacionMisaBox" style="display: none">
+        <iframe
+          class="mapa"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3459.1057628466464!2d-58.8377282!3d-27.4625881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456ca5f9173f77%3A0x5cb01a00561675f!2sParroquia%20San%20Francisco%20Solano!5e0!3m2!1ses!2sar!4v1705700000000"
+          width="100%"
+          height="300"
+          style="border: 0; border-radius: 12px"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div> -->
+    </section>
+
+    <section style="background-color: #eee9f0">
+      <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.8rem; color: #9575cd">Fiesta</h2>
+      <p>La fiesta se realizará en:<br /><strong>Salón de Eventos "Los Mellis del Taragúi" Corrientes Capital, sobre calle Frondizi esquina Nicaragua frente al jardin botanico</strong></p>
+      <div style="margin: 30px auto; max-width: 500px">
+        <img src="losmellis.png" alt="salon de fiesta los mellis del taragui" style="width: 100%; border-radius: 18px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15)" />
+      </div>
+      <button class="btn" onclick="toggleUbicacionFiesta(event)">VER UBICACIÓN</button>
+      <div id="ubicacionFiestaBox" style="display: none">
+        <iframe
+          class="mapa"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3560.641902246623!2d-58.798354!3d-27.5014113!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456bb90d4ddf35%3A0xc58dbe1def98e301!2sLos%20Mellis!5e0!3m2!1ses!2sar!4v1700000000000"
+        ></iframe>
+      </div>
+    </section>
+
+    <section>
+      <p style="font-family: 'Great Vibes', cursive; font-size: 2.5rem; color: var(--lila-fuerte)">Regalo</p>
+      <div style="margin-bottom: 20px">
+        <svg width="70px" height="70px" viewBox="0 0 1024 1024" class="icon" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <g id="SVGRepo_iconCarrier">
+            <path
+              d="M634 412.8v151.7c0 4.4-3.6 7.9-7.9 7.9H524.2V412.8H634zM455 412.8v159.7H350.1c-4.4 0-7.9-3.6-7.9-7.9V412.8H455zM511.6 400.2V572.5h-44v-252c3.6-0.1 7.3-0.3 11-0.5h2.7c9.6 0.6 18.7 0.8 27.3 0.8h3.1v79.4zM661 330.6v59c0 5.9-4.8 10.6-10.6 10.6H524.2v-79.7c3-0.1 5.9-0.3 8.7-0.5h117.6c5.8 0 10.5 4.8 10.5 10.6zM455 320.8v79.4H322.4c-5.9 0-10.6-4.8-10.6-10.6v-59c0-5.9 4.8-10.6 10.6-10.6h104.5c7.6 0.6 15.7 0.9 24.4 0.9 1.2 0 2.4-0.1 3.7-0.1z"
+              fill="#C0C0C0"
+            ></path>
+
+            <path
+              d="M868.7 456.5v377.2c0 39.9-32.5 72.4-72.4 72.4h-646c-36.4 0-66.1-29.6-66.1-66.1V464.8l125.9-112.6v16.9L96.8 470.4v369.5c0 29.5 24 53.5 53.5 53.5h646c33 0 59.8-26.8 59.8-59.8V462l-98.6-89.8v-16.4l0.3-0.3 110.9 101z"
+              fill="#b39ddb"
+            ></path>
+
+            <path
+              d="M856.1 462v371.6c0 33-26.8 59.8-59.8 59.8h-646c-29.5 0-53.5-24-53.5-53.5V470.4l113.3-101.3V551l-54.4-52.2-8.7 9.1 71.1 68.3 72.3 69.5L146.7 801l9.2 8.5 143.5-155.3 63.3 60.8h229.4l71.8-64.2 146.7 158.7 9.2-8.5-146.5-158.5 138.8-124.1-8.4-9.4-46.2 41.3V372.2l98.6 89.8z"
+              fill="#9575cd"
+            ></path>
+
+            <path d="M673.3 642.5L819.8 801l-9.2 8.6-146.7-158.7z" fill="#C0C0C0"></path>
+            <path
+              d="M803.7 509.1l8.4 9.4-138.8 124-1.3-1.5-9.2 8.5 1.2 1.3-71.8 64.2H362.8l-63.3-60.8 4.4-4.7-9.3-8.5-4.2 4.5-72.3-69.5 1.9-1.9 2.7 2.5v-13.7l145.2 139.5h219.5L745 561.5v12.3c4-2.9 7.1-6.7 9.3-11 1.9-3.8 3.1-8.1 3.3-12.5l46.1-41.2z"
+              fill="#b39ddb"
+            ></path>
+            <path
+              d="M757.5 372.2v178.2L745 561.6v-390c0-17.2-14-31.2-31.2-31.2H253.9c-17.2 0-31.2 14-31.2 31.2v391.5L210.1 551V369.1l8.9-8-8.4-9.4-0.5 0.5V159c0-17.2 14-31.2 31.2-31.2h485c17.2 0 31.2 14 31.2 31.2v196.8l-8.2 9 8.2 7.4z"
+              fill="#9575cd"
+            ></path>
+
+            <path
+              d="M744.9 171.6v390L587.3 702.5H367.8L222.6 563.1V171.6c0-17.2 14-31.2 31.2-31.2h459.9c17.3 0 31.2 14 31.2 31.2z m-71.3 218v-59c0-12.8-10.4-23.2-23.2-23.2h-64.6c8.9-4.7 15.4-10.6 19.4-17.7 12.4-22-3.7-45.9-4.7-47.4-11.3-13.6-24.3-19.7-38.7-18-36.6 4.1-70.6 59.1-81.9 79.3-11.3-20.2-45.3-75.2-81.9-79.3-14.4-1.6-27.4 4.4-39.1 18.5-0.7 1-16.8 24.9-4.3 46.9 4 7.1 10.5 13 19.4 17.7h-51.6c-12.8 0-23.2 10.4-23.2 23.2v59c0 12.8 10.4 23.2 23.2 23.2h7.2v151.7c0 11.3 9.2 20.5 20.5 20.5H626c11.3 0 20.5-9.2 20.5-20.5V412.8h3.8c12.9 0 23.3-10.4 23.3-23.2z"
+              fill="#f3e5f5"
+            ></path>
+
+            <path d="M590.5 249.9c0.1 0.2 12.3 18.6 3.7 33.7-5.6 9.9-21.3 20.8-61.1 23.8h-40.9c14.1-24.7 43.9-67.6 71-70.6 10-1.2 19.1 3.3 27.3 13.1z" fill="#b39ddb"></path>
+            <path d="M467.6 307.4h-41.4c-39.6-3.1-55-13.9-60.7-23.8-8.5-15 3.4-33.2 3.4-33.2 8.5-10.3 17.6-14.7 27.6-13.6 27.2 3 57 45.9 71.1 70.6z" fill="#b39ddb"></path>
+          </g>
+        </svg>
+      </div>
+      <p style="color: #8a8a8a; max-width: 400px; margin: 0 auto 30px">Tu presencia es nuestro mejor regalo, pero si deseas hacerme un presente...</p>
+      <button class="btn" onclick="toggleCBU()">VER DATOS BANCARIOS</button>
+      <div id="cbuBox" style="display: none">
+        <p><strong>Titular:</strong> MORENA CATALINA SOLIS MACHUCA</p>
+        <p><strong>CBU:</strong> 0000003100035144964095</p>
+        <p><strong>Alias:</strong> morena.solis.10</p>
+      </div>
+    </section>
+
+    <section>
+      <p style="font-family: 'Great Vibes', cursive; font-size: 3rem; color: var(--lila-fuerte); margin-bottom: 20px">Música</p>
+      <div style="margin-bottom: 25px">
+        <svg width="70px" height="70px" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" stroke-width="2.5" stroke="#c4c4c4" fill="none">
+          <g id="SVGRepo_iconCarrier">
+            <polyline points="51.7 38.3 51.7 6.72 22.7 17.52 22.7 51.66" stroke="#c4c4c4"></polyline>
+            <circle cx="16.5" cy="51.74" r="6.2" stroke="#9575cd" fill="rgba(179, 157, 219, 0.2)"></circle>
+            <circle cx="45.5" cy="37.05" r="6.2" stroke="#9575cd" fill="rgba(179, 157, 219, 0.2)"></circle>
+            <line x1="22.7" y1="26.78" x2="51.7" y2="15.79" stroke="#c4c4c4"></line>
+          </g>
+        </svg>
+      </div>
+      <p style="color: #777; margin-bottom: 30px; letter-spacing: 1px">¿Qué canción no puede faltar en la fiesta?</p>
+      <button class="btn" onclick="recomendaciones()">SUGERIR CANCIÓN</button>
+    </section>
+
+    <section style="background-color: #f3f3f3">
+      <h2 style="font-family: 'Great Vibes', cursive; font-size: 2.8rem; color: #9575cd">Confirmación</h2>
+      <p>¿Me acompañas en esta noche mágica?</p>
+      <a href="https://wa.me/5493794324147?text=Hola%20Morena,%20confirmo%20mi%20asistencia" class="btn" style="background-color: #25d366">CONFIRMAR POR WHATSAPP</a>
+    </section>
+
+    <audio id="musica" loop>
+      <source src="If_Only.mp3" type="audio/mpeg" />
+    </audio>
+    <script src="script.js"></script>
+  </body>
+</html>
