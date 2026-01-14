@@ -16,7 +16,7 @@ body {
   background-color: var(--color-fondo);
   color: var(--texto);
   text-align: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("img/fondo.avif");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("./img/fondo.avif");
   background-size: cover;
   background-attachment: fixed;
   overflow-x: hidden;
@@ -152,4 +152,5 @@ section {
   margin: 25px auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
 }
+
 
