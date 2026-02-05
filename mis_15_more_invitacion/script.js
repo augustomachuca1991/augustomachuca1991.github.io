@@ -11,9 +11,28 @@ setInterval(() => {
   }
 }, 1000);
 
-// --- MÚSICA Y AUTOPLAY ---
 const audio = document.getElementById("musica");
 const musicBtn = document.getElementById("musicBtn");
+const overlay = document.getElementById("overlay");
+
+function comenzarInvitacion() {
+  // 1. Ocultamos el telón
+  overlay.style.opacity = "0";
+  overlay.style.transform = "scale(1.1)";
+
+  // 2. Reproducir música (El clic desbloquea el audio del navegador)
+  audio
+    .play()
+    .then(() => {
+      musicBtn.innerText = "❚❚";
+    })
+    .catch((err) => console.log("Error de audio:", err));
+
+  // 3. Eliminar del DOM después de la animación
+  setTimeout(() => {
+    overlay.style.display = "none";
+  }, 800);
+}
 
 function toggleMusic() {
   if (audio.paused) {
