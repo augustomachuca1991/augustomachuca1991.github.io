@@ -15,16 +15,30 @@ const audio = document.getElementById("musica");
 const musicBtn = document.getElementById("musicBtn");
 const overlay = document.getElementById("overlay");
 
+function fadeInAudio() {
+  audio.volume = 0; // Empezamos en silencio total
+  const duration = 4000; // Tiempo en milisegundos que tarda en llegar al 100% (4 segundos)
+  const interval = 100; // Intervalo de actualización (0.1 segundos)
+  const step = 1 / (duration / interval);
+
+  const fade = setInterval(() => {
+    if (audio.volume < 0.9) {
+      audio.volume += step;
+    } else {
+      audio.volume = 1; // Aseguramos el máximo
+      clearInterval(fade);
+    }
+  }, interval);
+}
+
 function comenzarInvitacion() {
-  // 1. Ocultamos el telón
   overlay.style.opacity = "0";
   overlay.style.transform = "scale(1.1)";
-
-  // 2. Reproducir música (El clic desbloquea el audio del navegador)
   audio
     .play()
     .then(() => {
       musicBtn.innerText = "❚❚";
+      fadeInAudio(); // Arrancamos el volumen tenue
     })
     .catch((err) => console.log("Error de audio:", err));
 
