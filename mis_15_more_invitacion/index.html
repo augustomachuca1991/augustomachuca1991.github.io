@@ -8,6 +8,27 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
+    <div
+      id="overlay"
+      style="
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: #eee9f0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.5s ease;
+      "
+    >
+      <h2 style="font-family: &quot;Great Vibes&quot;, cursive; font-size: 3rem; color: #9575cd">Tienes una invitación especial...</h2>
+      <p style="font-family: &quot;Montserrat&quot;, sans-serif; color: #7e57c2; margin-bottom: 20px">HAZ CLIC PARA DESCUBRIRLA</p>
+      <button onclick="comenzarInvitacion()" class="btn" style="background-color: #9575cd; color: white">ABRIR INVITACIÓN</button>
+    </div>
     <button class="btn music-btn" id="musicBtn" onclick="toggleMusic()">▶</button>
 
     <header class="header-animado">
