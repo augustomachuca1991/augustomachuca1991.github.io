@@ -32,6 +32,11 @@ function fadeInAudio() {
 }
 
 function comenzarInvitacion() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth", // opcional
+  });
+
   overlay.style.opacity = "0";
   overlay.style.transform = "scale(1.1)";
   audio
