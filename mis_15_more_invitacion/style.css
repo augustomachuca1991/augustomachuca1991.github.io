@@ -148,9 +148,89 @@ section {
   background-color: #ffffff;
   padding: 20px;
   border-radius: 16px;
+  color: #4a4a4a;
   max-width: 500px;
   margin: 25px auto;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+}
+
+.dresscode-section {
+  padding: 70px 20px;
+  text-align: center;
+  color: white;
+}
+
+.section-title {
+  font-family: "Great Vibes", cursive;
+  font-size: 3rem;
+  margin-bottom: 35px;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* CONTENEDOR ICONOS */
+
+.dresscode-icons {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  margin-bottom: 35px;
+  flex-wrap: wrap;
+}
+
+.dresscode-item {
+  text-align: center;
+  font-family: "Great Vibes", cursive;
+  font-size: 1.6rem;
+  opacity: 0.95;
+}
+
+.dresscode-svg {
+  width: 70px;
+  height: 70px;
+  fill: white;
+  margin-bottom: 10px;
+  opacity: 0.85;
+  transition: transform 0.3s ease;
+}
+
+.dresscode-item:hover .dresscode-svg {
+  transform: scale(1.1);
+}
+
+/* BADGE */
+
+.dresscode-badge {
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(6px);
+  padding: 10px 28px;
+  border-radius: 30px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.35);
+}
+
+/* NOTA */
+
+.dresscode-note {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  opacity: 0.85;
+  letter-spacing: 0.5px;
+}
+
+/* DECORACIÓN */
+
+.dresscode-decoration {
+  margin-top: 25px;
+  opacity: 0.6;
+}
+
+.dresscode-decoration svg {
+  width: 60px;
+  height: 60px;
 }
 
 @keyframes float {
